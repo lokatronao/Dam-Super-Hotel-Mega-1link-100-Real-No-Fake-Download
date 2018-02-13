@@ -49,7 +49,7 @@ public class Empleado extends Persona {
 	}
 
 	/**
-	 * @param puesto agrega el puesto
+	 * @param puesto Agrega el puesto
 	 */
 	protected void setPuesto(String puesto) {
 		this.puesto = puesto;

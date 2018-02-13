@@ -1,13 +1,19 @@
 package Hotel;
 
+/**
+ * Clase padre persona
+ * 
+ * @author lokatronao
+ *
+ */
 public class Persona {
 	String nombre, apellidos, dni, direccion;
 	
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
-	 * @param direccion
+	 * @param nombre Nombre de la persona
+	 * @param apellidos Apellidos de la persona
+	 * @param dni DNI de la persona
+	 * @param direccion Direccion de la persona
 	 */
 	protected Persona(String nombre, String apellidos, String dni, String direccion) {
 		this.nombre = nombre;
@@ -17,9 +23,9 @@ public class Persona {
 	}
 
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
+	 * @param nombre Nombre de la persona
+	 * @param apellidos Apellidos de la persona
+	 * @param dni DNI de la persona
 	 */
 	protected Persona(String nombre, String apellidos, String dni) {
 		this.nombre = nombre;
@@ -34,56 +40,56 @@ public class Persona {
 	}
 
 	/**
-	 * @return the nombre
+	 * @return nombre
 	 */
 	protected String getNombre() {
 		return nombre;
 	}
 
 	/**
-	 * @param nombre the nombre to set
+	 * @param nombre Agrega el nombre
 	 */
 	protected void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
 	/**
-	 * @return the apellidos
+	 * @return apellidos
 	 */
 	protected String getApellidos() {
 		return apellidos;
 	}
 
 	/**
-	 * @param apellidos the apellidos to set
+	 * @param apellidos Agrega los apellidos
 	 */
 	protected void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
 
 	/**
-	 * @return the dni
+	 * @return dni
 	 */
 	protected String getDni() {
 		return dni;
 	}
 
 	/**
-	 * @param dni the dni to set
+	 * @param dni Agrega el DNI
 	 */
 	protected void setDni(String dni) {
 		this.dni = dni;
 	}
 
 	/**
-	 * @return the direccion
+	 * @return direccion
 	 */
 	protected String getDireccion() {
 		return direccion;
 	}
 
 	/**
-	 * @param direccion the direccion to set
+	 * @param direccion Agrega la direccion 
 	 */
 	protected void setDireccion(String direccion) {
 		this.direccion = direccion;
