@@ -3,8 +3,8 @@ package Hotel;
 /**
  * Clase padre persona
  * 
- * @author lokatronao
- *
+ * @author Miguel Angel
+ * @author Dani
  */
 public class Persona {
 	String nombre, apellidos, dni, direccion;

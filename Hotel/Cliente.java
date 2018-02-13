@@ -6,7 +6,8 @@ package Hotel;
 /**
  * Clase cliente herencia de clase Persona
  * 
- * @author lokatronao
+ * @author Miguel Angel
+ * @author Dani
  * 
  */
 public class Cliente extends Persona {

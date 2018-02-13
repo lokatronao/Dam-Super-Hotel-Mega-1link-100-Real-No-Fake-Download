@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author lokatronao
- *
+ * @author Miguel Angel
+ * @author Dani
  */
 package Hotel;
