@@ -4,6 +4,8 @@
 package Hotel;
 
 /**
+ * Clase empleado herencia de clase Persona 
+ * 
  * @author lokatronao
  *
  */
@@ -11,11 +13,11 @@ public class Empleado extends Persona {
 	String puesto;
 
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
-	 * @param direccion
-	 * @param puesto
+	 * @param nombre Nombre del empleado
+	 * @param apellidos Apellidos del empleado
+	 * @param dni DNI del empleado
+	 * @param direccion Direccion del empleado
+	 * @param puesto Puesto en el que esta el empleado
 	 */
 	protected Empleado(String nombre, String apellidos, String dni, String direccion, String puesto) {
 		super(nombre, apellidos, dni, direccion);
@@ -23,10 +25,10 @@ public class Empleado extends Persona {
 	}
 
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
-	 * @param puesto
+	 * @param nombre Nombre del empleado
+	 * @param apellidos Apellidos del empleado
+	 * @param dni DNI del empleado
+	 * @param puesto Puesto en el que esta el empleado
 	 */
 	protected Empleado(String nombre, String apellidos, String dni, String puesto) {
 		super(nombre, apellidos, dni);
@@ -40,14 +42,14 @@ public class Empleado extends Persona {
 	}
 
 	/**
-	 * @return the puesto
+	 * @return puesto
 	 */
 	protected String getPuesto() {
 		return puesto;
 	}
 
 	/**
-	 * @param puesto the puesto to set
+	 * @param puesto agrega el puesto
 	 */
 	protected void setPuesto(String puesto) {
 		this.puesto = puesto;

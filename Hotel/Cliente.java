@@ -4,8 +4,10 @@
 package Hotel;
 
 /**
+ * Clase cliente herencia de clase Persona
+ * 
  * @author lokatronao
- *
+ * 
  */
 public class Cliente extends Persona {
 
@@ -18,10 +20,10 @@ public class Cliente extends Persona {
 	}
 
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
-	 * @param direccion
+	 * @param nombre Nombre de la persona
+	 * @param apellidos Apellidos de la persona
+	 * @param dni DNI de la persona
+	 * @param direccion Direccion de la persona
 	 */
 	protected Cliente(String nombre, String apellidos, String dni, String direccion) {
 		super(nombre, apellidos, dni, direccion);
@@ -29,9 +31,11 @@ public class Cliente extends Persona {
 	}
 
 	/**
-	 * @param nombre
-	 * @param apellidos
-	 * @param dni
+	 * Constructor Cliente
+	 * 
+	 * @param nombre Nombre de la persona
+	 * @param apellidos Apellidos de la persona
+	 * @param dni DNI de la persona
 	 */
 	protected Cliente(String nombre, String apellidos, String dni) {
 		super(nombre, apellidos, dni);
