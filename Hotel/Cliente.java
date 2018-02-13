@@ -8,6 +8,7 @@ package Hotel;
  * 
  * @author Miguel Angel
  * @author Dani
+ * @author Jose Ignacio
  * 
  */
 public class Cliente extends Persona {
