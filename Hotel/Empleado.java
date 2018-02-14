@@ -33,7 +33,7 @@ public class Empleado extends Persona {
 	 * 
 	 */
 	
-	protected Empleado() {
+	public Empleado() {
 	}
 
 	/**

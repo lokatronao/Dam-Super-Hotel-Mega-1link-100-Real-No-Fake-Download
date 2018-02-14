@@ -16,7 +16,7 @@ public class Cliente extends Persona {
 	/**
 	 * 
 	 */
-	protected Cliente() {
+	public Cliente() {
 		super();
 	}
 
@@ -28,7 +28,7 @@ public class Cliente extends Persona {
 	 * @param telefono Telefono de contacto del cliente
 	 */
 
-	protected Cliente(String nombre, String apellidos, String dni, String mail, String telefono) {
+	public Cliente(String nombre, String apellidos, String dni, String mail, String telefono) {
 		super(nombre, apellidos, dni, mail, telefono);
 	}	
 	

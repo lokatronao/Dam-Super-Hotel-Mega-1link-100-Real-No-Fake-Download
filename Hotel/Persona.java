@@ -19,7 +19,7 @@ public class Persona {
 	 * @param telefono Telefono de contacto de la persona
 	 */
 
-	protected Persona(String nombre, String apellidos, String dni, String mail, String telefono) {
+	public Persona(String nombre, String apellidos, String dni, String mail, String telefono) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -32,7 +32,7 @@ public class Persona {
 	 * 
 	 */
 	
-	protected Persona() {
+	public Persona() {
 	}
 
 	/**
