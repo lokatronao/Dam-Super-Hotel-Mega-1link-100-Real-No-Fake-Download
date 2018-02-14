@@ -18,34 +18,28 @@ public class Empleado extends Persona {
 	 * @param nombre Nombre del empleado
 	 * @param apellidos Apellidos del empleado
 	 * @param dni DNI del empleado
-	 * @param direccion Direccion del empleado
+	 * @param mail Correo electronico del empleado
+	 * @param telefono Telefono de contacto del empleado
 	 * @param puesto Puesto en el que esta el empleado
+	 * 
 	 */
-	protected Empleado(String nombre, String apellidos, String dni, String direccion, String puesto) {
-		super(nombre, apellidos, dni, direccion);
-		this.puesto = puesto;
-	}
 
-	/**
-	 * @param nombre Nombre del empleado
-	 * @param apellidos Apellidos del empleado
-	 * @param dni DNI del empleado
-	 * @param puesto Puesto en el que esta el empleado
-	 */
-	protected Empleado(String nombre, String apellidos, String dni, String puesto) {
-		super(nombre, apellidos, dni);
+	public Empleado(String nombre, String apellidos, String dni, String mail, String telefono, String puesto) {
+		super(nombre, apellidos, dni, mail, telefono);
 		this.puesto = puesto;
 	}
 
 	/**
 	 * 
 	 */
+	
 	protected Empleado() {
 	}
 
 	/**
 	 * @return puesto
 	 */
+	
 	protected String getPuesto() {
 		return puesto;
 	}
@@ -53,9 +47,9 @@ public class Empleado extends Persona {
 	/**
 	 * @param puesto Agrega el puesto
 	 */
+	
 	protected void setPuesto(String puesto) {
 		this.puesto = puesto;
-	}
-	
+	}	
 	
 }

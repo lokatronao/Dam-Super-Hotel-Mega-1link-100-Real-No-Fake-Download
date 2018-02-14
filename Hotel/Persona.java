@@ -9,35 +9,29 @@ package Hotel;
  * 
  */
 public class Persona {
-	String nombre, apellidos, dni, direccion;
+	String nombre, apellidos, dni, mail, telefono;
 	
 	/**
 	 * @param nombre Nombre de la persona
 	 * @param apellidos Apellidos de la persona
 	 * @param dni DNI de la persona
-	 * @param direccion Direccion de la persona
+	 * @param mail Correo electronico de la persona
+	 * @param telefono Telefono de contacto de la persona
 	 */
-	protected Persona(String nombre, String apellidos, String dni, String direccion) {
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.dni = dni;
-		this.direccion = direccion;
-	}
 
-	/**
-	 * @param nombre Nombre de la persona
-	 * @param apellidos Apellidos de la persona
-	 * @param dni DNI de la persona
-	 */
-	protected Persona(String nombre, String apellidos, String dni) {
+	protected Persona(String nombre, String apellidos, String dni, String mail, String telefono) {
+		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.dni = dni;
+		this.mail = mail;
+		this.telefono = telefono;
 	}
 
 	/**
 	 * 
 	 */
+	
 	protected Persona() {
 	}
 
@@ -82,21 +76,37 @@ public class Persona {
 	protected void setDni(String dni) {
 		this.dni = dni;
 	}
-
+	
 	/**
-	 * @return direccion
+	 * @return mail
 	 */
-	protected String getDireccion() {
-		return direccion;
-	}
 
-	/**
-	 * @param direccion Agrega la direccion 
-	 */
-	protected void setDireccion(String direccion) {
-		this.direccion = direccion;
+	protected String getMail() {
+		return mail;
 	}
 	
+	/**
+	 * @param mail Agrega el correo electronico
+	 */
+
+	protected void setMail(String mail) {
+		this.mail = mail;
+	}
 	
+	/**
+	 * @return telefono
+	 */
+
+	protected String getTelefono() {
+		return telefono;
+	}
+	
+	/**
+	 * @param telefono Agrega el telefono
+	 */
+
+	protected void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
 	
 }
