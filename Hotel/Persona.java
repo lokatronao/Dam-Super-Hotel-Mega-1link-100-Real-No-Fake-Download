@@ -8,7 +8,7 @@ package Hotel;
  * @author Jose Ignacio
  * 
  */
-public class Persona {
+public abstract class Persona  {
 	String nombre, apellidos, dni, mail, telefono;
 	
 	/**
@@ -20,7 +20,6 @@ public class Persona {
 	 */
 
 	public Persona(String nombre, String apellidos, String dni, String mail, String telefono) {
-		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.dni = dni;
