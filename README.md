@@ -1,7 +1,7 @@
 # Dam-Super-Hotel-Mega-1link-No-Fake-Download
 
 Documentacion <a href="https://lokatronao.github.io/Doc-Dam-Super-Hotel-Mega-1link-100-Real-No-Fake-Download/"> Click Aquí</a>
-a
+
 # Descripción del sistema:
 Se solicita el desarrollo de un sistema que permita la gestión de un hotel. El programa será accesible tanto para clientes como para trabajadores, teniendo éstos últimos que iniciar sesión para acceder a funcionalidades específicas del servicio del hotel.
 
