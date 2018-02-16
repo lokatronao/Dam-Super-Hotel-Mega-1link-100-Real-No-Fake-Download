@@ -37,7 +37,7 @@ Se solicita el desarrollo de un sistema que permita la gestión de un hotel. El 
 
 3.2.	De los empleados se guardará nombre, apellidos, dirección, DNI y puesto.
 
-3.3.  De las habitaciones se guardará el precio, personas, baños, cerrado.
+3.3.  De las habitaciones se guardará el precio, personas, numero de habitacion, cerrado.
 
 ## Requisitos de Hardware
 
