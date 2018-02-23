@@ -8,27 +8,31 @@ package Hotel;
  *
  */
 public class Habitacion {
-	String precio, personas;
+	String precio, personas, numero;
 	boolean cerrado;
 	/**
 	 * @param precio Precio de la habitacion
 	 * @param personas Personas maximos en la habitacion
 	 * @param cerrado El apartamento 
+	 * @param numero Numero de la habitacion
 	 */
-	protected Habitacion(String precio, String personas, boolean cerrado) {
+	protected Habitacion(String precio, String personas, boolean cerrado, String numero) {
 		this.precio = precio;
 		this.personas = personas;
 		this.cerrado = cerrado;
+		this.numero = numero;
 	}
 	/**
 	 * Constructor que pondra automaticamente el cerrado en false
 	 * 
 	 * @param precio Precio de la habitacion
 	 * @param personas Personas maximos en la habitacion
+	 * @param numero Numero de la habitacion
 	 */
-	protected Habitacion(String precio, String personas) {
+	protected Habitacion(String precio, String personas,String numero) {
 		this.precio = precio;
 		this.personas = personas;
+		this.numero = numero;
 		cerrado = false;
 	}
 	/**
@@ -37,13 +41,25 @@ public class Habitacion {
 	protected Habitacion() {
 	}
 	/**
+	 * @return numero
+	 */
+	protected String getNumero() {
+		return numero;
+	}
+	/**
+	 * @param numero agrega el numero
+	 */
+	protected void setNumero(String numero) {
+		this.numero = numero;
+	}
+	/**
 	 * @return precio
 	 */
 	protected String getPrecio() {
 		return precio;
 	}
 	/**
-	 * @param precio the precio to set
+	 * @param precio agrega el precio
 	 */
 	protected void setPrecio(String precio) {
 		this.precio = precio;

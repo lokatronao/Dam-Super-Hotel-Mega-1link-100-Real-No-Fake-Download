@@ -5,7 +5,6 @@ package Hotel;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import Validadores.*;
 
 /**
@@ -25,7 +24,14 @@ public class ListaClientes {
 	 */
 	public ListaClientes() {
 	}
-
+	/**
+	 * Metodo encargado de comprobar clientes no registrados con el mismo DNI e EMAIL 
+	 * y en caso de no estar registrados los registra  
+	 * 
+	 * @param clienteInsertado Cliente que se pretende guardar
+	 * @return insertado booleano devuelve TRUE en caso de que se haya introducido el cliente FALSE en caso de que no se haya introducido
+	 *
+	 */
 	protected boolean insertarCliente(Cliente clienteInsertado) {
 		boolean insertado=true;
 		ValidadorDNI vdni = new ValidadorDNI();
@@ -64,5 +70,6 @@ public class ListaClientes {
 			System.out.println(cliente.getNombre());
 		}
 	}
+	
 
 }

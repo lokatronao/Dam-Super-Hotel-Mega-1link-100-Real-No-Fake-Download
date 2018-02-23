@@ -41,6 +41,7 @@ public class ValidadorDNI
  
         // Por último validamos que sólo tengo 8 dígitos entre los 8 primeros caracteres y que la letra introducida es igual a la de la ecuación
         // Llamamos a los métodos privados de la clase soloNumeros() y letraDNI()
+
         if(soloNumeros(dni) == true && letraDNI(dni).equals(letraMayuscula)) {
         		verdadero = true;
         }
