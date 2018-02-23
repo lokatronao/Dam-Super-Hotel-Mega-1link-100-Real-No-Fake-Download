@@ -4,7 +4,7 @@ package Validadores;
  * Clase ValidadorEMAIL encargada de verificar que los EMAIL sigan una
  * estructura
  * 
- * @author Miguel Angel
+ * @author Migel Angel
  * @author Dani
  * @author Jose Ignacio
  *
