@@ -1,7 +1,13 @@
 /**
  * 
  */
+
+/* A empleado le falta una contraseña para loggear
+Metela en el objeto y crea un objeto que almacene empleados */
+
 package Hotel;
+
+import java.util.ArrayList;
 
 /**
  * Clase empleado herencia de clase Persona 
@@ -13,6 +19,7 @@ package Hotel;
  */
 public class Empleado extends Persona {
 	String puesto;
+	String contrasenia;	
 
 	/**
 	 * @param nombre Nombre del empleado
@@ -24,9 +31,10 @@ public class Empleado extends Persona {
 	 * 
 	 */
 
-	public Empleado(String nombre, String apellidos, String dni, String mail, String telefono, String puesto) {
+	public Empleado(String nombre, String apellidos, String dni, String mail, String telefono, String puesto, String contrasenia) {
 		super(nombre, apellidos, dni, mail, telefono);
 		this.puesto = puesto;
+		this.contrasenia = contrasenia;
 	}
 
 	/**
@@ -50,6 +58,21 @@ public class Empleado extends Persona {
 	
 	protected void setPuesto(String puesto) {
 		this.puesto = puesto;
+	}		
+	
+	/**
+	 * @return contraseña
+	 */
+	protected String getContrasenia(String contrasenia) {
+		return contrasenia;
+	}
+	
+	/**
+	 * @param contraseña Agrega la contraseña
+	 */
+	
+	protected void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
 	}	
 	
 }
