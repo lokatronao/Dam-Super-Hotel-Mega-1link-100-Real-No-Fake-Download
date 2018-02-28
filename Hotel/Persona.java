@@ -8,7 +8,7 @@ package Hotel;
  * @author Jose Ignacio
  * 
  */
-//public abstract class Persona  {
+public abstract class Persona  {
 	String nombre, apellidos, dni, mail, telefono;
 	
 	/**
