@@ -33,11 +33,25 @@ public class ListaEmpleados {
 		return insertado;		
 	}
 	
-	protected boolean comprobarContrasenia (String contrasenia) {
+	protected boolean comprobarContrasenia (String contrasenia, String dni) {
 		boolean valida = false;
-		
-		
-		
+		String bcontrasenia; 
+		if (arrayEmpleados.size() > 0) {
+
+			Iterator<Empleado> iterador = arrayEmpleados.iterator();
+
+			while (iterador.hasNext()) {
+
+				Empleado Empleado = iterador.next();
+
+				if (!Empleado.getDni().equals(dni)) {
+					if(Empleado.getContrasenia().equals(contrasenia)) {
+						valida = true;
+					}
+				}
+
+			}
+		}
 		return valida;
 	}
 

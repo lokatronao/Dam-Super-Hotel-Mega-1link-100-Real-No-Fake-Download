@@ -2,7 +2,7 @@
  * 
  */
 
-/* A empleado le falta una contraseña para loggear
+/* A empleado le falta una contraseï¿½a para loggear
 Metela en el objeto y crea un objeto que almacene empleados */
 
 package Hotel;
@@ -61,14 +61,14 @@ public class Empleado extends Persona {
 	}		
 	
 	/**
-	 * @return contraseña
+	 * @return contraseniaa
 	 */
-	protected String getContrasenia(String contrasenia) {
+	protected String getContrasenia() {
 		return contrasenia;
 	}
 	
 	/**
-	 * @param contraseña Agrega la contraseña
+	 * @param contrasenia Agrega la contrasenia
 	 */
 	
 	protected void setContrasenia(String contrasenia) {
