@@ -146,7 +146,7 @@ public class Menus {
 		System.out.println(barras);
 	}
 	/**
-	 * Metodo que generara un menu a partir de un array
+	 * Metodo que generara un menu a partir de un array s
 	 * El metodo requiere al menos el titulo, una opcion y una pregunta al final
 	 * 
 	 * @param contenido Array en el que se esperan los textos del menu array (titulo,opcion1,opcion2,...,preguntafinal)

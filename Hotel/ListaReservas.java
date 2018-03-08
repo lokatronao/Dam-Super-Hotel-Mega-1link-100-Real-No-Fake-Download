@@ -7,7 +7,7 @@ import Validadores.ValidadorDNI;
 import Validadores.ValidadorEMAIL;
 
 /**
- * Clase encargada guardar las reservas
+ * Clase encargada guardar las reservas s
  * 
  * @author Miguel Angel
  * @author Dani

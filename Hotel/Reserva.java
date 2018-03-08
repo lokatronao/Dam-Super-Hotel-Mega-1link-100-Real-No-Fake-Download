@@ -1,7 +1,7 @@
 package Hotel;
 
 /**
- * Clase encargada de hacer reservas
+ * Clase encargada de hacer reservas s
  * 
  * @author Miguel Angel
  * @author Dani
