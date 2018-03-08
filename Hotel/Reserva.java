@@ -1,6 +1,5 @@
 package Hotel;
 
-import java.util.Date;
 /**
  * Clase encargada de hacer reservas
  * 
@@ -10,21 +9,18 @@ import java.util.Date;
  * 
  */
 public class Reserva {
-	String dni,codigo, reserva;
-	Date checkin, checkout;
+	String dni,codigo, reserva,habitacion;
 	/**
 	 * @param dni
 	 * @param codigo
 	 * @param reserva
-	 * @param checkin
-	 * @param checkout
+	 * @param habitacion
 	 */
-	public Reserva(String dni, String codigo, String reserva, Date checkin, Date checkout) {
+	public Reserva(String dni, String codigo, String reserva, String habitacion) {
 		this.dni = dni;
 		this.codigo = codigo;
 		this.reserva = reserva;
-		this.checkin = checkin;
-		this.checkout = checkout;
+		this.habitacion = habitacion;
 	}
 	/**
 	 * 

@@ -41,10 +41,10 @@ public class ListaEmpleados {
 			Iterator<Empleado> iterador = arrayEmpleados.iterator();
 
 			while (iterador.hasNext()) {
-
+				
 				Empleado Empleado = iterador.next();
 
-				if (!Empleado.getDni().equals(dni)) {
+				if (Empleado.getDni().equals(dni)) {
 					if(Empleado.getContrasenia().equals(contrasenia)) {
 						valida = true;
 					}
