@@ -9,18 +9,71 @@ package Hotel;
  * 
  */
 public class Reserva {
-	String dni,codigo, reserva,habitacion;
+	String dni,codigo, reserva,habitacion,dias;
+	boolean checkin,checkout;
+	/**
+	 * @return the habitacion
+	 */
+	protected String getHabitacion() {
+		return habitacion;
+	}
+	/**
+	 * @param habitacion the habitacion to set
+	 */
+	protected void setHabitacion(String habitacion) {
+		this.habitacion = habitacion;
+	}
+	/**
+	 * @return the dias
+	 */
+	protected String getDias() {
+		return dias;
+	}
+	/**
+	 * @param dias the dias to set
+	 */
+	protected void setDias(String dias) {
+		this.dias = dias;
+	}
+	/**
+	 * @return the checkin
+	 */
+	protected boolean isCheckin() {
+		return checkin;
+	}
+	/**
+	 * @param checkin the checkin to set
+	 */
+	protected void setCheckin(boolean checkin) {
+		this.checkin = checkin;
+	}
+	/**
+	 * @return the checkout
+	 */
+	protected boolean isCheckout() {
+		return checkout;
+	}
+	/**
+	 * @param checkout the checkout to set
+	 */
+	protected void setCheckout(boolean checkout) {
+		this.checkout = checkout;
+	}
 	/**
 	 * @param dni
 	 * @param codigo
+	 * @param dias
 	 * @param reserva
 	 * @param habitacion
 	 */
-	public Reserva(String dni, String codigo, String reserva, String habitacion) {
+	public Reserva(String dni, String codigo, String habitacion,String dias) {
 		this.dni = dni;
 		this.codigo = codigo;
-		this.reserva = reserva;
+		this.dias = dias;
+		this.reserva = numeroreserva();
 		this.habitacion = habitacion;
+		checkout=false;
+		checkin=false;
 	}
 	/**
 	 * 
@@ -64,30 +117,6 @@ public class Reserva {
 		this.reserva = reserva;
 	}
 	/**
-	 * @return the checkin
-	 */
-	protected Date getCheckin() {
-		return checkin;
-	}
-	/**
-	 * @param checkin the checkin to set
-	 */
-	protected void setCheckin(Date checkin) {
-		this.checkin = checkin;
-	}
-	/**
-	 * @return the checkout
-	 */
-	protected Date getCheckout() {
-		return checkout;
-	}
-	/**
-	 * @param checkout the checkout to set
-	 */
-	protected void setCheckout(Date checkout) {
-		this.checkout = checkout;
-	}
-	/**
 	 * @deprecated
 	 */
 	protected void test(){
@@ -107,4 +136,11 @@ public class Reserva {
 		return numeroreserva;
 	}
 	
+	protected void hacerCheckin() {
+		checkin = true;
+	}
+	
+	protected void hacerCheckout() {
+		checkout = true;
+	}
 }

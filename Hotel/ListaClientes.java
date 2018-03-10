@@ -59,6 +59,23 @@ public class ListaClientes {
 		}
 		return insertado;
 	}
+	
+	protected boolean clienteDNI(String dni) {
+		boolean existe = false;
+		
+		if (listaClientes.size() > 0) {
+			Iterator<Cliente> Iterator = listaClientes.iterator();
+			while (Iterator.hasNext() && !existe) {
+				Cliente cliente = Iterator.next();
+				if (dni.equals(cliente.getDni())) {
+					existe = true;
+				}
+			}
+		}
+		
+		return existe;
+	}
+	
 	/**
 	 * DEBUG
 	 * @deprecated

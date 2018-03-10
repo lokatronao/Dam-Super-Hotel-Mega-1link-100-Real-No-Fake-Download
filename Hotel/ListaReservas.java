@@ -33,47 +33,126 @@ public class ListaReservas {
 	 *         el cliente FALSE en caso de que no se haya introducido
 	 *
 	 */
-	protected boolean insertarCliente(Reserva reservaInsertado) {
-		boolean insertado = true;
-
-		if (listaReservas.size() > 0) {
-			if (vdni.validar(clienteInsertado.getDni()) && vemail.validar(clienteInsertado.getMail())) {
-				Iterator<Cliente> Iterator = listaReservas.iterator();
-				while (Iterator.hasNext() && insertado) {
-					Cliente cliente = Iterator.next();
-					if (cliente.getDni().equals(clienteInsertado.getDni())
-							|| cliente.getMail().equals(clienteInsertado.getMail())) {
-						insertado = false;
+	protected boolean insertarReserva(Reserva reservaInsertado, Habitacion[] habitacion) {
+		boolean insertado = false;
+		if(habitacion.length!=0) {
+			if (listaReservas.size() > 0) {
+				for(int i = 0;i<habitacion.length;i++) {
+					Iterator<Reserva> Iterator = listaReservas.iterator();
+					boolean valid = true;
+					while (Iterator.hasNext()&&valid) {
+						boolean valid2 = true;
+						Reserva reserva = Iterator.next();
+						String numero = habitacion[i].getNumero();
+						if(numero.equals(reserva.getHabitacion())) {
+							if(!reserva.isCheckin()) {
+								valid2 = false;
+							}else if(reserva.isCheckin()&&!reserva.isCheckout()) {
+								valid2 = false;
+							}
+							if(valid && !valid2) {
+								valid = false;
+							}
+						}
+					}
+					if(valid) {
+						reservaInsertado.setHabitacion(habitacion[i].getNumero());
+						listaReservas.add(reservaInsertado);
+						insertado = true;
+						break;
 					}
 				}
-			} else {
-				insertado = false;
+			}else {
+				reservaInsertado.setHabitacion(habitacion[0].getNumero());
+				listaReservas.add(reservaInsertado);
+				insertado = true;
 			}
-		} else {
-			if (!vdni.validar(clienteInsertado.getDni()) || !vemail.validar(clienteInsertado.getMail())) {
-				insertado = false;
-			}
-		}
-		if (insertado) {
-			listaReservas.add(clienteInsertado);
 		}
 		return insertado;
+			
 	}
-
+	protected boolean verReservas() {
+		boolean hay = true;
+		if (listaReservas.size() > 0) {
+			Iterator<Reserva> Iterator = listaReservas.iterator();
+			while (Iterator.hasNext()) {
+				Reserva reserva = Iterator.next();
+				System.out.println("Numero reserva: "+reserva.getReserva());
+				System.out.println("Codigo de la reserva: "+reserva.getCodigo());
+				System.out.println("Habitacion reservada: "+reserva.getHabitacion());
+				if(reserva.isCheckin()) {
+					System.out.println("Checkin Hecho");
+				}else {
+					System.out.println("Checkin pendiente");
+				}
+				if(reserva.isCheckout()) {
+					System.out.println("Checkout Hecho");
+				}else {
+					System.out.println("Checkout pendiente");
+				}
+			}
+		}else {
+			hay = false;
+		}
+		return hay;
+	}
 	protected boolean comprobarReserva(String numero) {
 		boolean encontrado = false;
 		if (listaReservas.size() > 0) {
-			Iterator<Cliente> Iterator = listaReservas.iterator();
+			Iterator<Reserva> Iterator = listaReservas.iterator();
 			while (Iterator.hasNext() && !encontrado) {
-				Cliente reserva = Iterator.next();
-				if (numero.equals(reserva)
-						|| cliente.getMail().equals(clienteInsertado.getMail())) {
-					insertado = false;
+				Reserva reserva = Iterator.next();
+				if (numero.equals(reserva.getReserva())) {
+					encontrado = true;
 				}
 			}
+		}
+		return encontrado;
+	}
+	
+	protected boolean hacerCheckin(String numero) {
+		boolean encontrado = false;
+		if (listaReservas.size() > 0) {
+			Iterator<Reserva> Iterator = listaReservas.iterator();
+			while (Iterator.hasNext() && !encontrado) {
+				Reserva reserva = Iterator.next();
+				if (numero.equals(reserva.getReserva())) {
+					reserva.hacerCheckin();
+					encontrado = true;
+				}
+			}
+		}
+		return encontrado;
+	}
+	
+	protected boolean hacerCheckout(String numero) {
+		boolean encontrado = false;
+		if (listaReservas.size() > 0) {
+			Iterator<Reserva> Iterator = listaReservas.iterator();
+			while (Iterator.hasNext() && !encontrado) {
+				Reserva reserva = Iterator.next();
+				if (numero.equals(reserva.getReserva())) {
+					if(reserva.isCheckin()) {
+						reserva.hacerCheckout();
+						encontrado = true;
+					}
+				}
+			}
+		}
+		return encontrado;
+	}
 
-		} else {
-
+	protected String eliminarReserva(String numero) {
+		String encontrado = "";
+		if (listaReservas.size() > 0) {
+			Iterator<Reserva> Iterator = listaReservas.iterator();
+			while (Iterator.hasNext() && !encontrado.equals("")) {
+				Reserva reserva = Iterator.next();
+				if (numero.equals(reserva.getReserva())) {
+						encontrado = reserva.getDni();
+						Iterator.remove();
+				}
+			}
 		}
 		return encontrado;
 	}
