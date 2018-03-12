@@ -78,7 +78,7 @@ public class HotelCalifornia {
 						do {
 							menu.tituloCentrado("Introduce el precio por noche de la reserva");
 							precioNoche = teclado.nextLine();
-						}while(Integer.parseInt(numeroPersonas) <= 0);
+						}while(Integer.parseInt(precioNoche) < 1);
 						Habitacion habitacion = new Habitacion(precioNoche,numeroPersonas,false,numeroHabitacion);
 						habitaciones.insertarHabitacion(habitacion);
 						break;
@@ -151,7 +151,7 @@ public class HotelCalifornia {
 						personas = teclado.nextLine();
 					}while(personas.equals(" "));
 					do {
-						menu.tituloCentrado("Cuantos dÃ­as quieres estar?");
+						menu.tituloCentrado("Cuantos días quieres estar?");
 						dias = teclado.nextLine();
 					}while(dias.equals(" "));
 					do {
