@@ -28,9 +28,9 @@ public class ValidadorDNI
 	public boolean validar(String dni) {
 		boolean verdadero = false;
          
-        String letraMayuscula = ""; //Guardaremos la letra introducida en formato mayÃºscula
+        String letraMayuscula = ""; //Guardaremos la letra introducida en formato mayuscula
              
-        // AquÃ­ excluimos cadenas distintas a 9 caracteres que debe tener un dni y tambiÃ©n si el Ãºltimo caracter no es una letra
+        // Aquí excluimos cadenas distintas a 9 caracteres que debe tener un dni y también si el último caracter no es una letra
         if(dni.length() != 9 || Character.isLetter(dni.charAt(8)) == false ) {
             verdadero = false;
         }
