@@ -33,22 +33,22 @@ public class ValidadorDNI
         // Aquí excluimos cadenas distintas a 9 caracteres que debe tener un dni y también si el último caracter no es una letra
         if(dni.length() != 9 || Character.isLetter(dni.charAt(8)) == false ) {
             verdadero = false;
-        }
- 
-         
-        // Al superar la primera restricción, la letra la pasamos a mayúscula
-        letraMayuscula = (dni.substring(8)).toUpperCase();
- 
-        // Por último validamos que sólo tengo 8 dígitos entre los 8 primeros caracteres y que la letra introducida es igual a la de la ecuación
-        // Llamamos a los métodos privados de la clase soloNumeros() y letraDNI()
-
-        if(soloNumeros(dni) == true && letraDNI(dni).equals(letraMayuscula)) {
+        }else{
+            // Al superar la primera restricción, la letra la pasamos a mayúscula
+            letraMayuscula = (dni.substring(8)).toUpperCase();
+     
+            // Por último validamos que sólo tengo 8 dígitos entre los 8 primeros caracteres y que la letra introducida es igual a la de la ecuación
+            // Llamamos a los métodos privados de la clase soloNumeros() y letraDNI()
+            if(soloNumeros(dni) == true && letraDNI(dni).equals(letraMayuscula)) {
         		verdadero = true;
+	        }
+	        else {
+	        		verdadero = false;
+	        }
         }
-        else {
-        		verdadero = false;
-        }
+         
         return verdadero;
+
     }
 
         private boolean soloNumeros(String dni) {

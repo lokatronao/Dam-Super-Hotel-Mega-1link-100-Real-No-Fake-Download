@@ -2,8 +2,17 @@ package Hotel;
 
 import	java.util.*;
 import Validadores.*;
+/**
+ * Clase principal del proyecto
+ * 
+ * @param args
+ */
 public class HotelCalifornia {
-	
+	/**
+	 * Clase principal del proyecto
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// Menus
 		String[] menuInicio = {"Bienvenido","LogginEmpleado","Hacer una reserva","Salir", "Marque la opcion que desea realizar"};
@@ -151,7 +160,7 @@ public class HotelCalifornia {
 						personas = teclado.nextLine();
 					}while(personas.equals(" "));
 					do {
-						menu.tituloCentrado("Cuantos días quieres estar?");
+						menu.tituloCentrado("Cuantos dï¿½as quieres estar?");
 						dias = teclado.nextLine();
 					}while(dias.equals(" "));
 					do {

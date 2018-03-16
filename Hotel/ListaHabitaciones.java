@@ -6,7 +6,7 @@ import java.util.Iterator;
 import Validadores.ValidadorDNI;
 import Validadores.ValidadorEMAIL;
 /**
- * Clase encargada guardar las reservas 
+ * Clase encargada guardar las habitaciones
  * 
  * @author Miguel Angel
  * @author Dani
@@ -23,13 +23,13 @@ public class ListaHabitaciones {
 	}
 
 	/**
-	 * Metodo encargado de comprobar clientes no registrados con el mismo DNI e
-	 * EMAIL y en caso de no estar registrados los registra
+	 * Metodo encargado de comprobar habitaciones no registradas con el mismo numero de habitacion e
+	 * y en caso de no estar registrados los registra
 	 * 
-	 * @param clienteInsertado
-	 *            Cliente que se pretende guardar
+	 * @param Habitacion habitacion a insertar
+	 *           
 	 * @return insertado booleano devuelve TRUE en caso de que se haya introducido
-	 *         el cliente FALSE en caso de que no se haya introducido
+	 *         la habitacion FALSE en caso de que no se haya introducido
 	 *
 	 */
 	protected boolean insertarHabitacion(Habitacion Habitacion) {
@@ -46,6 +46,10 @@ public class ListaHabitaciones {
 		}
 		return insertado;
 	}
+	/**
+	 * Clase encargada de mostrar las habitaciones
+	 * @return hay en caso de que no haya habitaciones devolverá un false
+	 */
 	protected boolean verHabitaciones() {
 		boolean hay = true;
 		if (listaHabitaciones.size() > 0) {
@@ -67,7 +71,11 @@ public class ListaHabitaciones {
 		}
 		return hay;
 	}
-	
+	/**
+	 * Clase encargada de encontrar una habitacion adecuada para un numero de personas
+	 * @param personas numero de personas para la reserva
+	 * @return encontrados array de habitaciones con las habitaciones seleccionadas
+	 */
 	protected Habitacion[] encontrarHabitacion(int personas) {
 		int i = 0;
 		Habitacion encontrados[] = new Habitacion[listaHabitaciones.size()];
@@ -83,7 +91,11 @@ public class ListaHabitaciones {
 		}
 		return encontrados;
 	}
-	
+	/**
+	 * Clase encargada de comprobar si una habitacion existe
+	 * @param numero numero de la habitacion
+	 * @return encontrado TRUE en caso de que se encuentre ese numero de habitacion False en caso de que no se encuentre ese numero de habitacion
+	 */
 	protected boolean comprobarHabitacion(String numero) {
 		boolean encontrado = false;
 		if (listaHabitaciones.size() > 0) {
@@ -97,7 +109,12 @@ public class ListaHabitaciones {
 		}
 		return encontrado;
 	}
-	
+	/**
+	 * Calcula el precio de una reserva teniendo en cuenta el numero de la habitacion y el numero de noches
+	 * @param numero numero de la habitacion
+	 * @param noches noches a calcular
+	 * @return precio precio total de esa estancia
+	 */
 	protected int comprobarprecio(String numero,int noches) {
 		int precio = 0;
 		if (listaHabitaciones.size() > 0) {
