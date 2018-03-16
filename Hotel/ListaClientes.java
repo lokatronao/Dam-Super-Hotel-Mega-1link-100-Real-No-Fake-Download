@@ -59,7 +59,11 @@ public class ListaClientes {
 		}
 		return insertado;
 	}
-	
+	/**
+	 * Metodo encargado de ver si existe un dni
+	 * @param dni
+	 * @return existe Este valor será true en caso de que se encuentre el dni en el arraylist
+	 */
 	protected boolean clienteDNI(String dni) {
 		boolean existe = false;
 		
